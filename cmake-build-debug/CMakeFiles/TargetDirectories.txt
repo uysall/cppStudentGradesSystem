@@ -1,0 +1,3 @@
+/home/omer/CLionProjects/cppStudentGradesSystem/cmake-build-debug/CMakeFiles/cppStudentGradesSystem.dir
+/home/omer/CLionProjects/cppStudentGradesSystem/cmake-build-debug/CMakeFiles/edit_cache.dir
+/home/omer/CLionProjects/cppStudentGradesSystem/cmake-build-debug/CMakeFiles/rebuild_cache.dir
