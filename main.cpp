@@ -12,7 +12,7 @@ int main() {
     std::cout << "How many students do you want to enter? ";
     std::cin >> numStudents;
 
-    for (int i = 0; i < numStudents; ++i) {
+    for (int i = 0; i < numStudents; i++) {
         std::string name;
         int visaNote, finalNote;
 
