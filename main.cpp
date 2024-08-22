@@ -12,7 +12,7 @@ int main() {
     std::cout << "How many students do you want to enter? ";
     std::cin >> numStudents;
 
-    for (int i = 0; i < numStudents; ++i) {
+    for (int i = 0; i < numStudents; i++) {
         std::string name;
         int visaNote, finalNote;
 
@@ -38,7 +38,7 @@ int main() {
             return sum + student.accountAverage();
         }) / students.size();
 
-    std::cout << "\nClass Average: " << std::fixed << std::setprecision(2) << classAverage << std::endl;
+    std::cout << "\nClass Average: "<<classAverage << std::endl;
 
     std::cout << "\nResults:\n";
     std::cout << std::left
@@ -51,14 +51,12 @@ int main() {
     std::cout << std::string(80, '-') << std::endl;
 
     for (const auto& student : students) {
-        double possibility = student.calculatePossibility(bellCurve, mu, sigma);
+        const double possibility = student.calculatePossibility(bellCurve, mu, sigma);
         std::cout << std::left
                   << std::setw(20) << student.name
                   << std::setw(12) << student.visaNote
                   << std::setw(12) << student.finalNote
-                  << std::fixed << std::setprecision(2)
                   << std::setw(12) << student.accountAverage()
-                  << std::scientific << std::setprecision(4)
                   << std::setw(15) << possibility
                   << (student.didPass(classAverage) ? "passed" : "failed")
                   << std::endl;

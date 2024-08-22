@@ -3,6 +3,7 @@
 
 #include <iostream>
 #include <string>
+#include <utility>
 #include "BellCurve.hpp"
 
 class Student {
@@ -18,11 +19,11 @@ public:
         return (visaNote * 0.4 + finalNote * 0.6);
     }
 
-    [[nodiscard]] bool didPass(double classAverage) const {
+    [[nodiscard]] bool didPass(const double classAverage) const {
         return accountAverage() >= classAverage;
     }
 
-    [[nodiscard]] double calculatePossibility(const BellCurve& bellCurve, double mu, double sigma) const {
+    [[nodiscard]] double calculatePossibility(const BellCurve& bellCurve, const double mu, const double sigma) const {
         return bellCurve.calculateExponent(accountAverage(), mu, sigma);
     }
 };
